@@ -25,13 +25,6 @@
     <string name="sQuantQuest"> de 18</string>
     <string name="sEscolha">Escolha uma opção</string>
     <string name="iddoapp">ca-app-pub-9218769381944425~7120876774</string>
-    <string name="iddobanner">ca-app-pub-9218769381944425/9573093376</string>
-    <!--string name="iddobanner2">ca-app-pub-9218769381944425/3445904384</string-->
-    <string name="idinteresticial">ca-app-pub-9218769381944425/2459129925</string>
-    <!--Test banner: ca-app-pub-3940256099942544/6300978111
-    Test Intersticial: ca-app-pub-3940256099942544/1033173712
-    Intersticial: ca-app-pub-9218769381944425/2459129925
-    Banner: ca-app-pub-9218769381944425/9573093376-->
 
 
     <string name="stringQ9">Questão 9</string>
