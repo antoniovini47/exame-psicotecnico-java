@@ -1,8 +1,17 @@
 apply plugin: 'com.android.application'
 
+def productionAds = project.findProperty('adsProduction') == 'true'
+gradle.taskGraph.whenReady { graph ->
+    if (!productionAds && graph.allTasks.any { it.name == 'bundleRelease' }) {
+        throw new GradleException('bundleRelease publica na loja: rode com -PadsProduction=true para usar os anúncios reais')
+    }
+}
+
 android {
     compileSdkVersion 34
     defaultConfig {
+        resValue 'string', 'iddobanner', productionAds ? 'ca-app-pub-9218769381944425/9573093376' : 'ca-app-pub-3940256099942544/6300978111'
+        resValue 'string', 'idinteresticial', productionAds ? 'ca-app-pub-9218769381944425/2459129925' : 'ca-app-pub-3940256099942544/1033173712'
         applicationId "com.rotech.examepsicotecnico"
         minSdk 21
         targetSdkVersion 34
